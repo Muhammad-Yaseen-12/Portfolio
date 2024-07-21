@@ -1,0 +1,272 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-transform: none;
+}
+
+:root {
+    --secondary-color: #ca8a04;
+    --text-dark: #1f2937;
+    --dark: #11171f;
+    --text-light: #b2c1db;
+    --extra-light: #faf5ff;
+    --max-width: 1200px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--dark);
+    z-index: 10;
+}
+
+.nav-content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--extra-light);
+    transition: 0.3s;
+}
+
+nav .logo a:hover {
+    color: var(--secondary-color);
+}
+
+nav .logo span {
+    color: var(--secondary-color);
+}
+
+.checkbtn {
+    font-size: 2rem;
+    color: var(--extra-light);
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a {
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--extra-light);
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.section {
+    background-color: var(--text-dark);
+}
+
+.section-container {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitle {
+    color: var(--extra-light);
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--extra-light);
+    margin-bottom: 1rem;
+}
+
+.title span {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.description {
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.action-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btns button {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 1rem;
+    outline: none;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.hire-me {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+.hire-me:hover {
+    background-color: var(--extra-light);
+    color: var(--secondary-color);
+}
+
+.download-cv {
+    color: var(--secondary-color);
+}
+
+.download-cv:hover {
+    background-color: var(--text-dark);
+    color: #ffffff;
+}
+
+#c1 {
+    color: #0A63BC;
+}
+
+#c2 {
+    color: #F70000;
+}
+
+#c3 {
+    color: #0866FF;
+}
+
+#c4 {
+    color: #F56040;
+}
+
+#c5 {
+    color: #1DA1F2;
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media i {
+    font-size: 30px;
+    margin-left: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.image {
+    display: grid;
+    place-items: center;
+}
+
+.image img {
+    width: min(25rem, 90%);
+    border-radius: 100%;
+    z-index: 1;
+    animation: floatupdown 3s ease-in-out infinite;
+}
+
+@keyframes floatupdown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive Media */
+@media (width < 750px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 85px;
+        background-color: var(--dark);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked~ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 1.25rem;
+
+    }
+
+    .section-container {
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .image {
+        grid-area: 1/1/2/2;
+    }
+
+    .action-btns {
+        margin: auto;
+    }
+}
