@@ -172,7 +172,7 @@ ul li a:hover {
     background-color: var(--text-dark);
     color: #ffffff;
 }
-
+/* Social Media Icons */
 #c1 {
     color: #0A63BC;
 }
@@ -198,7 +198,7 @@ ul li a:hover {
 }
 
 .social-media i {
-    font-size: 30px;
+    font-size: 28px;
     margin-left: 20px;
     text-align: center;
     cursor: pointer;
@@ -216,7 +216,7 @@ ul li a:hover {
     z-index: 1;
     animation: floatupdown 3s ease-in-out infinite;
 }
-
+/* Key Frames */
 @keyframes floatupdown {
 
     0%,
